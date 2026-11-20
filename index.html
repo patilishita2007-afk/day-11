@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete HTML & CSS Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Complete Registration Form</h2>
+    <p class="subtitle">Please fill out all required fields below.</p>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+      
+      <!-- Two-Column Row: Text Inputs -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name *</label>
+          <input type="text" id="first-name" name="first_name" placeholder="Aarav" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name *</label>
+          <input type="text" id="last-name" name="last_name" placeholder="Sharma" required>
+        </div>
+      </div>
+
+      <!-- Two-Column Row: Email & Password -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="aarav@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" placeholder="Min. 8 characters" minlength="8" required>
+        </div>
+      </div>
+
+      <!-- Two-Column Row: Date & Dropdown -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+        <div class="form-group">
+          <label for="role">Role / Department *</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="developer">Software Developer</option>
+            <option value="designer">UI/UX Designer</option>
+            <option value="manager">Product Manager</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Radio Buttons -->
+      <div class="form-group">
+        <label>Account Type</label>
+        <div class="inline-options">
+          <label class="option-label">
+            <input type="radio" name="account_type" value="personal" checked> Personal
+          </label>
+          <label class="option-label">
+            <input type="radio" name="account_type" value="business"> Business
+          </label>
+          <label class="option-label">
+            <input type="radio" name="account_type" value="enterprise"> Enterprise
+          </label>
+        </div>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="form-group">
+        <label>Areas of Interest</label>
+        <div class="inline-options">
+          <label class="option-label">
+            <input type="checkbox" name="interests" value="frontend"> Frontend
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="interests" value="backend"> Backend
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="interests" value="ai"> AI & Data
+          </label>
+        </div>
+      </div>
+
+      <!-- Range Slider -->
+      <div class="form-group">
+        <label for="experience">Years of Experience (0 – 15+)</label>
+        <input type="range" id="experience" name="experience" min="0" max="15" value="3">
+      </div>
+
+      <!-- File Upload -->
+      <div class="form-group">
+        <label for="resume">Upload Resume / Portfolio (PDF, PNG, JPG)</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.png,.jpg,.jpeg">
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label for="bio">Additional Notes / Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..."></textarea>
+      </div>
+
+      <!-- Terms Agreement -->
+      <div class="form-group">
+        <label class="option-label">
+          <input type="checkbox" name="terms" required> I agree to the Terms & Conditions *
+        </label>
+      </div>
+
+      <!-- Submit & Reset Buttons -->
+      <div class="button-group">
+        <button type="submit" class="btn-submit">Submit Form</button>
+        <button type="reset" class="btn-reset">Clear</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
